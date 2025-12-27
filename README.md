@@ -51,8 +51,8 @@ npm install
 Create a secret configuration for the HD Wallet. Open truffle-config.js and ensure your 12-word mnemonic is set:
 
 JavaScript
-
-```const mnemonic = "theory rabbit ceiling kite ..."; // Your Ganache words
+```
+const mnemonic = "theory rabbit ceiling kite ..."; // Your Ganache words
 ```
 
 ### Step 3: Deployment (The Bonus Workflow)
