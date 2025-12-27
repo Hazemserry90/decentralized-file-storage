@@ -52,7 +52,7 @@ Create a secret configuration for the HD Wallet. Open truffle-config.js and ensu
 
 JavaScript
 ```
-const mnemonic = "theory rabbit ceiling kite ..."; // Your Ganache words
+const mnemonic = "Your Ganache words ..."; // 
 ```
 
 ### Step 3: Deployment (The Bonus Workflow)
@@ -74,7 +74,7 @@ Inside the console, run these commands:
 ## JavaScript
 ```
 let instance = await FileStorage.deployed()
-await instance.setHash("QmUfV2qm2amkDN93JBoaM8MC8DWfFXiSuTmEuBNm6g7fUL") // Example IPFS Hash
+await instance.setHash("Your cid") // Example IPFS Hash
 await instance.getHash()
 ```
 ## 🎓 Learning Outcomes
