@@ -34,19 +34,6 @@ The system follows a 3-step decentralized workflow:
 
 ---
 
-## 🛠️ Technical Components
-
-| Component | Role in Project |
-| :--- | :--- |
-| **Solidity** | The programming language used to write the smart contract logic. |
-| **Ganache** | A personal blockchain simulator used to deploy the contract and mine transactions. |
-| **Truffle Suite** | The development framework used to compile, migrate, and interact with the blockchain. |
-| **Node.js** | The runtime environment for executing the build scripts. |
-| **IPFS Desktop** | The tool used to upload files to the decentralized web. |
-| **HDWalletProvider** | **(Bonus)** The middleware that signs transactions using a specific mnemonic. |
-
----
-
 ## 🚀 How to Run the Project
 
 ### Prerequisites
@@ -55,18 +42,20 @@ The system follows a 3-step decentralized workflow:
 *   IPFS Desktop
 
 ### Step 1: Installation
-```bash
+``` bash
 git clone https://github.com/Hazemserry90/decentralized-file-storage.git
 cd decentralized-file-storage
 npm install
-
+```
 ### Step 2: Configuration
 Create a secret configuration for the HD Wallet. Open truffle-config.js and ensure your 12-word mnemonic is set:
 
 JavaScript
 
 const mnemonic = "theory rabbit ceiling kite ..."; // Your Ganache words
-Step 3: Deployment (The Bonus Workflow)
+
+
+### Step 3: Deployment (The Bonus Workflow)
 Run the migration using the custom network. This proves the HD Wallet integration works:
 
 Bash
@@ -74,20 +63,29 @@ Bash
 npx truffle migrate --network bonus_network
 Output will show the contract being deployed by the specific account associated with your mnemonic.
 
-Step 4: Verification
+### Step 4: Verification
 Interact with the contract to store and retrieve data:
 
 Bash
 
 npx truffle console
-JavaScript
+Inside the console, run these commands:
+
+## JavaScript
 
 let instance = await FileStorage.deployed()
 await instance.setHash("QmUfV2qm2amkDN93JBoaM8MC8DWfFXiSuTmEuBNm6g7fUL") // Example IPFS Hash
 await instance.getHash()
-🎓 Learning Outcomes
+## 🎓 Learning Outcomes
 By building this project, I have demonstrated:
 
 Blockchain interaction: Writing and deploying Smart Contracts.
 Decentralized Storage: Understanding how IPFS CIDs work compared to HTTP URLs.
 Key Management: Moving beyond default development accounts to managing Private Keys and Seed Phrases programmatically.
+
+
+
+
+
+
+
