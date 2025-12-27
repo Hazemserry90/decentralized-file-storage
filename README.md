@@ -52,30 +52,31 @@ Create a secret configuration for the HD Wallet. Open truffle-config.js and ensu
 
 JavaScript
 
-const mnemonic = "theory rabbit ceiling kite ..."; // Your Ganache words
-
+```const mnemonic = "theory rabbit ceiling kite ..."; // Your Ganache words
+```
 
 ### Step 3: Deployment (The Bonus Workflow)
 Run the migration using the custom network. This proves the HD Wallet integration works:
 
-Bash
+``` Bash
 
 npx truffle migrate --network bonus_network
 Output will show the contract being deployed by the specific account associated with your mnemonic.
-
+```
 ### Step 4: Verification
 Interact with the contract to store and retrieve data:
 
-Bash
+``` Bash
 
 npx truffle console
 Inside the console, run these commands:
-
+```
 ## JavaScript
-
+```
 let instance = await FileStorage.deployed()
 await instance.setHash("QmUfV2qm2amkDN93JBoaM8MC8DWfFXiSuTmEuBNm6g7fUL") // Example IPFS Hash
 await instance.getHash()
+```
 ## 🎓 Learning Outcomes
 By building this project, I have demonstrated:
 
